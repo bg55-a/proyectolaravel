@@ -85,6 +85,7 @@
                     class="text-sm text-gray-600"
                 >{{ __('Datos de perfil actualizadas.') }}</p>
             @endif
+            
         </div>
     </form>
 </section>
