@@ -4,7 +4,13 @@
 @section('title', 'Inicio')
 
 @section('content_header')
-    <h1 class="text-center"><b>MIP</b></h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1 class="text-left"> <img src="{{asset('img/paisaje.png')}}" style="width: 50px; height: 50px;"> Mip </h1>
+            </div>
+        </div>
+    </div>
 @stop
 
 @section('content')

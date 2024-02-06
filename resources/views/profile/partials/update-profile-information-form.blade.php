@@ -67,7 +67,7 @@
             @if ($user->photo)
                 <x-input-label for="photo" :value="__('Foto actual')" class="text-center" />
                 <div style="display: flex; justify-content: center">
-                    <img src="{{asset('storage/' .$user->photo) }}" class="img" width="200px" height="100px">
+                    <img src="{{asset('storage/' . $user->photo) }}" class="img" width="200px" height="100px">
                 </div>
             @endif
             <x-input-error class="mt-2" :messages="$errors->get('photo')" />

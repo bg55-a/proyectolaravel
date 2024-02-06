@@ -35,13 +35,10 @@ class ProfileController extends Controller
         }
 
         $user=auth()->user();
-        
-        
             if ($request->hasFile('photo')) {
-                File::delete(public_path('storage/'.$user->photo));
+                File::delete(public_path('storage/' . $user->photo));
                 $photo = $request['photo']->store('profiles');
-            } 
-         else {
+            } else {
             $photo = $user->photo;
         }
         $user->photo = $photo;
