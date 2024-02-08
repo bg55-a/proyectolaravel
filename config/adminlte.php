@@ -1,5 +1,7 @@
 <?php
 
+use phpDocumentor\Reflection\PseudoTypes\True_;
+
 return [
 
     /*
@@ -15,7 +17,7 @@ return [
     */
 
     'title' => '',
-    'title_prefix' => '',
+    'title_prefix' => 'Mip | ',
     'title_postfix' => '',
 
     /*
@@ -30,7 +32,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -109,7 +111,7 @@ return [
     'preloader' => [
         'enabled' => true,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/paisaje.png',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
@@ -130,11 +132,11 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
+    'usermenu_image' => True,
     'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -150,8 +152,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -211,7 +213,7 @@ return [
     */
 
     'sidebar_mini' => 'lg',
-    'sidebar_collapse' => false,
+    'sidebar_collapse' => true,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
@@ -253,7 +255,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'inicio',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -300,7 +302,8 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'buscar',
+            
         ],
         [
             'text' => 'blog',
@@ -313,15 +316,37 @@ return [
             'icon'        => 'fas fa-home',
         ],
         ['header' => 'Panel'],
+        
+       
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Entendimiento Comun',
+            'route'  => 'admin.entendimiento',
+            'icon' => 'fas fa-clipboard-list',
+            'submenu' => [
+                ['text' => 'Actores clave',
+                'url'  => '#',
+            ],
+            ]
         ],
         [
-            'text' => 'Editar Perfil',
-            'route'  => 'profile.edit',
-            'icon' => 'fas fa-cogs',
+            'text' => 'Diagnostico',
+            'route'  => 'admin.diagnostico',
+            'icon' => 'fas fa-th-large',
+        ],
+        [
+            'text' => 'Planeacion',
+            'route'  => 'admin.planeacion',
+            'icon' => 'fas fa-chalkboard-teacher',
+        ],
+        [
+            'text' => 'Ejecucion y Evaluacion ',
+            'route'  => 'admin.ejecucion',
+            'icon' => 'fas fa-file-alt',
+        ],
+        [
+            'text' => 'Compartir',
+            'route'  => 'admin.compartir',
+            'icon' => 'fas fa-share-square',
         ],
        
     ],

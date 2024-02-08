@@ -46,4 +46,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function adminlte_image()
+    {
+        $user = auth()->user();
+    $profileImage = $user->photo; // Reemplaza 'photo' con el nombre del campo que almacena la foto de perfil en tu modelo de usuario
+    $imageUrl = asset('storage/' . $profileImage);
+
+    return $imageUrl;
+    }
+    public function adminlte_profile_url()
+    {
+        return 'profile';
+    }
 }

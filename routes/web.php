@@ -1,6 +1,11 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CompartirController;
+use App\Http\Controllers\DiagnosticoController;
+use App\Http\Controllers\EjecucionController;
+use App\Http\Controllers\EntendimientoController;
+use App\Http\Controllers\PlaneacionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +35,10 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/inicio', [AdminController::class, 'index'])->name('admin.index');
-
+Route::get('/compartir', [CompartirController::class, 'compartir'])->name('admin.compartir');
+Route::get('/diagnostico', [DiagnosticoController::class, 'diagnostico'])->name('admin.diagnostico');
+Route::get('/ejecucion', [EjecucionController::class, 'ejecucion'])->name('admin.ejecucion');
+Route::get('/entendimiento', [EntendimientoController::class, 'entendimiento'])->name('admin.entendimiento');
+Route::get('/planeacion', [PlaneacionController::class, 'planeacion'])->name('admin.planeacion');
 
 require __DIR__.'/auth.php';

@@ -1,7 +1,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Editar Perfil')
+@section('title', 'Perfil')
 
 @section('content_header')
 <h2 class="font-semibold text-xl text-gray-800 leading-tight text-center">
