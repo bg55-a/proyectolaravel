@@ -320,18 +320,76 @@ return [
        
         [
             'text' => 'Entendimiento Comun',
-            'route'  => 'admin.entendimiento',
+            
             'icon' => 'fas fa-clipboard-list',
             'submenu' => [
-                ['text' => 'Actores clave',
-                'url'  => '#',
+                [
+                'text' => 'Actores clave',
+                
+                'submenu' => [
+                    ['text' => 'Sector social ',
+                    'route'  => 'admin.entendimiento',
+                    ],
+                    ['text' => 'Sector publico ',
+                    'url'  => '#',
+                    ],
+                    ['text' => 'Sector privado ',
+                    'url'  => '#',
+                    ],
+                ]
             ],
+            [
+                'text' => 'Formacion continua',
+                'url'  => '#',
+                'submenu' => [
+                    ['text' => 'Gobernanza ',
+                    'url'  => '#',
+                    ],
+                    ['text' => 'Mip',
+                    'url'  => '#',
+                    ],
+                    ['text' => 'Topicos selectos',
+                    'url'  => '#',
+                    ],
+            ],
+            ]
             ]
         ],
         [
             'text' => 'Diagnostico',
-            'route'  => 'admin.diagnostico',
+            
             'icon' => 'fas fa-th-large',
+            'submenu' => [
+                [
+                'text' => 'Estudios socioeconomicos',
+                
+                'submenu' => [
+                    ['text' => 'Propiedad de la tierra ',
+                    'route'  => 'admin.diagnostico',
+                    ],
+                    ['text' => 'Organizacion productiva ',
+                    'url'  => '#',
+                    ],
+                    
+                ]
+            ],
+            [
+                'text' => 'Estudios geomorfologicos',
+                'url'  => '#',
+                'submenu' => [
+                    ['text' => 'Relieve ',
+                    'url'  => '#',
+                    ],
+                    ['text' => 'suelo',
+                    'url'  => '#',
+                    ],
+                    ['text' => 'Unidades climaticas',
+                    'url'  => '#',
+                    ],
+            ],
+            ]
+            ]
+
         ],
         [
             'text' => 'Planeacion',
@@ -468,7 +526,7 @@ return [
     |
     | For detailed instructions you can look the iframe mode section here:
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/IFrame-Mode-Configuration
-    |
+    |   
     */
 
     'iframe' => [
